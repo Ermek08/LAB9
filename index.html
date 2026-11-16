@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Учебный проект Growing Landing — портфолио веб-разработчика">
+    <title>Growing Landing — портфолио</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<header class="header" id="top">
+    <div class="container header-inner">
+        <a class="brand" href="#top"><span class="brand-mark">G</span> grow<span class="brand-dot">.</span>dev</a>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <label class="burger" for="nav-toggle"
+               aria-label="Открыть или закрыть меню"><span></span><span></span><span></span></label>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#projects">Проекты</a><a href="#contact">Контакты</a>
+        </nav>
+        <button class="theme-toggle" type="button" id="theme-toggle" disabled title="Реализуем на лекции №9"
+                aria-label="Переключить тему">☾
+        </button>
+        <a class="header-cta" href="#contact">Обсудить проект <span>↗</span></a>
+    </div>
+</header>
+
+<main>
+    <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+            <div class="eyebrow"><span class="online-dot"></span> Открыт к новым проектам</div>
+            <p class="hero-kicker" id="developer-name">Привет! Я начинающий веб-разработчик 👋</p>
+            <h1 id="hero-title">Создаю сайты,<br>которые <span class="accent">впечатляют.</span></h1>
+            <p class="hero-description" id="developer-position"></p>
+            <div class="hero-actions"><a class="button button-primary" href="#projects">Мои работы <span>↗</span></a><a
+                    class="button button-outline" href="#about">Обо мне</a></div>
+            <div class="hero-footnote"><span class="avatar-stack"><b>H</b><b>C</b><b>J</b></span> Один проект. Лекции
+                №6–16. Постоянный рост.
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="visual-orbit orbit-one"></div>
+            <div class="visual-orbit orbit-two"></div>
+            <div class="code-card">
+                <div class="code-header"><span
+                        class="traffic"><i></i><i></i><i></i></span><span>portfolio.js</span><span>✦</span></div>
+                <div class="code-lines"><p><span class="violet">const</span> developer = {</p>
+                    <p> &nbsp;name: <span class="green">"Student"</span>,</p>
+                    <p> &nbsp;skills: [<span class="green">"HTML"</span>, <span class="green">"CSS"</span>],</p>
+                    <p> &nbsp;learning: <span class="orange">true</span>,</p>
+                    <p> &nbsp;next: <span class="green">"JavaScript"</span></p>
+                    <p>};</p>
+                    <p class="code-comment">// Будем развивать на лекциях!</p></div>
+            </div>
+            <div class="floating-chip chip-top">✦ <span>Creative developer</span></div>
+            <div class="floating-chip chip-bottom">⚡ <span>Learning by building</span></div>
+        </div>
+    </section>
+
+    <section class="ticker" aria-label="Технологии">
+        <div class="container ticker-inner"><span>HTML5</span><span class="ticker-star">✳</span><span>CSS3</span><span
+                class="ticker-star">✳</span><span>RESPONSIVE</span><span
+                class="ticker-star">✳</span><span>GRID & FLEX</span><span class="ticker-star">✳</span><span>JAVASCRIPT SOON</span>
+        </div>
+    </section>
+
+    <section class="section container about" id="about">
+        <div class="section-heading">
+            <div><p class="section-label">01 / Обо мне</p>
+                <h2>Люблю превращать<br>идеи в <em>интерфейсы.</em></h2></div>
+            <p class="section-intro">Этот сайт — мой учебный проект. С каждой новой темой JavaScript он будет
+                становиться функциональнее.</p></div>
+        <div class="about-grid">
+            <div class="about-panel">
+                <div class="panel-icon">✳</div>
+                <h3>Учусь через практику</h3>
+                <p>Каждую неделю добавляю новую возможность: от простых переменных до форм, фильтров и анимаций.</p>
+                <p class="about-next">На лекции №6 создадим отдельную страницу <code>about.html</code>.</p>
+                <a class="button button-outline" href="about.html">Подробнее обо мне ↗</a>
+
+                <div class="skills-list" id="skills-list"></div>
+
+                <p id="developer-city"></p>
+                <p id="developer-email"></p>
+                <p id="developer-availability"></p>
+                </div>
+            <aside class="learning-panel"><p class="learning-caption">ПРОГРЕСС КУРСА</p>
+                <div class="progress-label"><strong>Growing Landing</strong><span>Старт</span></div>
+                <div class="progress-track"><span></span></div>
+                <p>Сейчас сайт готов на HTML и CSS. JavaScript будем добавлять поэтапно.</p></aside>
+        </div>
+    </section>
+
+    <section class="section section-soft" id="services">
+        <div class="container">
+            <div class="section-heading">
+                <div><p class="section-label">02 / Чем занимаюсь</p>
+                    <h2>Что я могу <em>создать.</em></h2></div>
+                </div>
+            <div class="cards" id="services-list"></div>
+        </div>
+    </section>
+
+    <section class="section container" id="projects">
+        <div class="section-heading">
+            <div><p class="section-label">03 / Портфолио</p>
+                <h2>Избранные <em>проекты.</em></h2></div>
+            <p class="section-intro">На лекциях №13–14 научимся создавать карточки из объектов, фильтровать их и искать
+                по названию.</p></div>
+        <!-- Лекции №13–14: студенты активируют фильтры и поиск, затем генерируют карточки из массива объектов. -->
+        <div class="portfolio-controls" aria-label="Будущие инструменты портфолио">
+            <div class="portfolio-filters" id="project-filters">
+                <button type="button" class="filter-button is-selected" data-category="all" disabled>Все</button>
+                <button type="button" class="filter-button" data-category="landing" disabled>Лендинги</button>
+                <button type="button" class="filter-button" data-category="app" disabled>Приложения</button>
+                <button type="button" class="filter-button" data-category="portfolio" disabled>Портфолио</button>
+            </div>
+            <label class="search-field" for="project-search"><span>Поиск</span><input id="project-search" type="search"
+                                                                                      placeholder="Поиск по названию (лекция №14)"
+                                                                                      disabled></label>
+        </div>
+        <div class="projects-grid" id="projects-list">
+            <article class="project-card project-lilac">
+                <div class="project-art"><span class="art-window"><i></i><i></i><i></i><b></b><b></b></span><span
+                        class="art-big">01</span></div>
+                <div class="project-meta">
+                    <div><h3>Creative Studio</h3>
+                        <p>Лендинг • HTML / CSS</p></div>
+                    <span>↗</span></div>
+            </article>
+            <article class="project-card project-mint">
+                <div class="project-art"><span class="art-window"><i></i><i></i><i></i><b></b><b></b></span><span
+                        class="art-big">02</span></div>
+                <div class="project-meta">
+                    <div><h3>Digital Space</h3>
+                        <p>Портфолио • Responsive</p></div>
+                    <span>↗</span></div>
+            </article>
+        </div>
+        <p class="projects-count" id="projects-count">Пока показаны 2 учебных проекта</p></section>
+
+    <section class="section section-soft" id="statistics">
+        <div class="container">
+            <div class="section-heading">
+                <div><p class="section-label">04 / Статистика</p>
+                    <h2>Мой путь <em>в цифрах.</em></h2></div>
+                <p class="section-intro">На лекции №7 добавим сюда значения через JavaScript.</p></div>
+            <div class="stats-grid">
+                <div class="stat-card"><strong id="stat-projects">—</strong><span>Проектов</span></div>
+                <div class="stat-card"><strong id="stat-experience">—</strong><span>Месяцев обучения</span></div>
+                <div class="stat-card"><strong id="skills-count">—</strong><span>Навыков</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container" id="faq">
+        <div class="section-heading">
+            <div><p class="section-label">05 / Вопросы</p>
+                <h2>Частые <em>вопросы.</em></h2></div>
+            <p class="section-intro">На лекции №11 сделаем вопросы раскрывающимися с помощью DOM и событий.</p></div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>
+                    <button class="faq-question" type="button" aria-expanded="true" disabled>Как развивается этот сайт?
+                        <span>＋</span></button>
+                </h3>
+                <div class="faq-answer"><p>На каждой лекции мы добавляем новую функциональность к одному проекту.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>
+                    <button class="faq-question" type="button" aria-expanded="true" disabled>Нужно ли знать JavaScript
+                        заранее? <span>＋</span></button>
+                </h3>
+                <div class="faq-answer"><p>Нет. Начинаем с основ и постепенно переходим к интерактивности.</p></div>
+
+            </div>
+            <div class="faq-item">
+                <h3>
+                    <button class="faq-question" type="button" aria-expanded="true" disabled>Можно ли посмотреть
+                        проекты? <span>＋</span></button>
+                </h3>
+                <div class="faq-answer"><p>Да, примеры находятся в разделе «Портфолио».</p></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Лекция №11: статичная разметка отзывов; JS-переключение студенты пишут сами. -->
+    <section class="section section-soft" id="reviews">
+        <div class="container">
+            <div class="section-heading">
+                <div><p class="section-label">06 / Отзывы</p>
+                    <h2>Что говорят <em>обо мне.</em></h2></div>
+                <p class="section-intro">Подготовленный HTML-блок. На лекции №11 превратим его в слайдер.</p></div>
+            <div class="review-card" id="review-card">
+                <div class="review-stars" aria-label="Пять звёзд">★★★★★</div>
+                <blockquote id="review-text">«Аккуратный адаптивный сайт и приятный интерфейс. Отличная учебная
+                    работа!»
+                </blockquote>
+                <div class="review-person"><span class="review-avatar" aria-hidden="true">АМ</span>
+                    <div><strong id="review-author">Алина М.</strong><span
+                            id="review-role">Учебный отзыв (вымышленный)</span></div>
+                </div>
+            </div>
+            <div class="review-controls"><span id="review-counter">01 / 03</span>
+                <div>
+                    <button type="button" id="prev-review" aria-label="Предыдущий отзыв" disabled>←</button>
+                    <button type="button" id="next-review" aria-label="Следующий отзыв" disabled>→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Лекция №12: функции, параметры и return. Кнопка станет активной после JS-лабораторной. -->
+    <section class="section container greeting-section" id="greeting-section">
+        <div class="greeting-card">
+            <div><p class="section-label">07 / Приветствие</p>
+                <h2>Давайте <em>знакомиться.</em></h2>
+                <p id="greeting-message" aria-live="polite">Привет, будущий разработчик! 👋</p></div>
+            <div class="greeting-input"><label for="visitor-name">Как вас зовут?</label>
+                <div><input id="visitor-name" type="text" placeholder="Введите имя" disabled>
+                    <button type="button" id="greet-button" class="button button-primary" disabled>Поздороваться ↗
+                    </button>
+                </div>
+                <small>Активируем с помощью функций на лекции №12.</small></div>
+        </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+            <div><p class="section-label">08 / Контакты</p>
+                <h2>Есть идея?<br><em>Давайте обсудим.</em></h2>
+                <p>Контактная форма пока демонстрационная. На лекции №10 добавим проверку имени, email, телефона и
+                    сообщения, в том числе через RegExp.</p><a href="mailto:hello@example.com" class="contact-email">hello@example.com
+                    ↗</a></div>
+            <form class="contact-form" id="contact-form"><label for="contact-name">Ваше имя</label><input
+                    id="contact-name" name="name" type="text" placeholder="Как вас зовут?"><small class="field-error"
+                                                                                                  id="name-error"
+                                                                                                  aria-live="polite"></small><label
+                    for="contact-email">Email</label><input id="contact-email" name="email" type="email"
+                                                            placeholder="example@mail.com"><small class="field-error"
+                                                                                                  id="email-error"
+                                                                                                  aria-live="polite"></small><label
+                    for="contact-phone">Телефон (+996)</label><input id="contact-phone" name="phone" type="tel"
+                                                                     placeholder="+996700123456"
+                                                                     autocomplete="tel"><small class="field-error"
+                                                                                               id="phone-error"
+                                                                                               aria-live="polite"></small><label
+                    for="contact-message">Сообщение</label><textarea id="contact-message" name="message" rows="4"
+                                                                     placeholder="Расскажите о проекте"></textarea><small
+                    class="field-error" id="message-error" aria-live="polite"></small>
+                <button class="button button-primary" type="submit" disabled title="Активируем на лекции №10">Отправить
+                    сообщение ↗
+                </button>
+                <p class="form-note">Пока кнопка отключена. Проверку и обработчик submit студенты добавят на лекции
+                    №10.</p>
+                <p id="form-feedback" aria-live="polite"></p></form>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container footer-inner"><a class="brand" href="#top"><span class="brand-mark">G</span> grow<span
+            class="brand-dot">.</span>dev</a><span>Учебный проект · Growing Landing</span><a href="#top">Наверх ↑</a>
+    </div>
+</footer>
+</body>
+</html>
